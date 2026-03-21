@@ -1,5 +1,6 @@
 using BaseBackgroundJob.Application;
 using BaseBackgroundJob.Persistence;
+using BaseBackgroundJob.Infrastructure;
 using BaseBackgroundJob.Persistence.Initialization;
 using BaseBackgroundJob.Api.Configurations;
 using BaseBackgroundJob.Api.Extensions;
@@ -24,6 +25,7 @@ builder.Services.AddApiServices();
 builder.Services.AddApplication();
 
 builder.Services.AddInfrastructurePersistence(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 

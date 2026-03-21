@@ -13,6 +13,7 @@ public interface IJobService
 
     string Enqueue<T>(Expression<Func<T, Task>> methodCall);
 
+
     string Schedule(Expression<Action> methodCall, TimeSpan delay);
 
     string Schedule(Expression<Func<Task>> methodCall, TimeSpan delay);
@@ -29,13 +30,16 @@ public interface IJobService
 
     string Schedule<T>(Expression<Func<T, Task>> methodCall, DateTimeOffset enqueueAt);
 
+
     bool Delete(string jobId);
 
     bool Delete(string jobId, string fromState);
 
+
     bool Requeue(string jobId);
 
     bool Requeue(string jobId, string fromState);
+
 
     void Recurring<T>(string jobName, Expression<Func<T, Task>> methodCall, string cronExpression);
 }

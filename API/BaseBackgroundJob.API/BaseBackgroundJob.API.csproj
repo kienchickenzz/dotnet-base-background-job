@@ -26,6 +26,7 @@
     <ItemGroup>
         <ProjectReference Include="..\..\Infrastructure\BaseBackgroundJob.Persistence\BaseBackgroundJob.Persistence.csproj" />
         <ProjectReference Include="..\..\Core\BaseBackgroundJob.Application\BaseBackgroundJob.Application.csproj" />
+        <ProjectReference Include="..\..\Infrastructure\BaseBackgroundJob.Infrastructure\BaseBackgroundJob.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
