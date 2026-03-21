@@ -1,6 +1,6 @@
 ﻿namespace BaseBackgroundJob.Api.Extensions;
 
-using BaseCleanArchitecture.Api.Middlewares;
+using BaseBackgroundJob.Api.Middlewares;
 
 
 public static class AppExtensions

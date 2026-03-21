@@ -4,7 +4,24 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <DocumentationFile>API.xml</DocumentationFile>
+
+        <!-- Tắt CS1587: XML comment không đặt trước language element hợp lệ (dùng cho file header comment) -->
+        <NoWarn>CS1587</NoWarn>
+        <!-- Tắt CS1591: thiếu XML comment cho public type/member (cho phép public member không bắt buộc có XML doc) -->
+        <NoWarn>CS1591</NoWarn>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="6.0.0" />
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="6.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.25">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Serilog.AspNetCore" Version="6.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\..\Infrastructure\BaseBackgroundJob.Persistence\BaseBackgroundJob.Persistence.csproj" />

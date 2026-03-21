@@ -1,56 +1,56 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>BaseCleanArchitecture.Api</name>
+        <name>BaseBackgroundJob.API</name>
     </assembly>
     <members>
-        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.GetProductPaginated(BaseCleanArchitecture.Application.Features.V1.Products.Queries.GetProducts.GetProductsQuery)">
+        <member name="M:BaseBackgroundJob.Api.Controllers.Features.V1.Products.ProductController.GetProductPaginated(BaseBackgroundJob.Application.Features.V1.Products.Queries.GetProducts.GetProductsQuery)">
             <summary>
             Get the paginated product list
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.GetProductById(System.Int32)">
+        <member name="M:BaseBackgroundJob.Api.Controllers.Features.V1.Products.ProductController.GetProductById(System.Int32)">
             <summary>
             Get product by id
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.CreateProduct(BaseCleanArchitecture.Application.Features.V1.Products.Commands.CreateProduct.CreateProductCommand)">
+        <member name="M:BaseBackgroundJob.Api.Controllers.Features.V1.Products.ProductController.CreateProduct(BaseBackgroundJob.Application.Features.V1.Products.Commands.CreateProduct.CreateProductCommand)">
             <summary>
             Create product
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.UpdateProduct(BaseCleanArchitecture.Application.Features.V1.Products.Commands.UpdateProduct.UpdateProductCommand)">
+        <member name="M:BaseBackgroundJob.Api.Controllers.Features.V1.Products.ProductController.UpdateProduct(BaseBackgroundJob.Application.Features.V1.Products.Commands.UpdateProduct.UpdateProductCommand)">
             <summary>
             Update product
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:BaseCleanArchitecture.Api.Controllers.Features.V1.Products.ProductController.DeleteProduct(System.Int32)">
+        <member name="M:BaseBackgroundJob.Api.Controllers.Features.V1.Products.ProductController.DeleteProduct(System.Int32)">
             <summary>
             Delete product
             </summary>
             <param name="id"></param>
             <returns></returns>
-            <exception cref="T:BaseCleanArchitecture.Application.Common.Exceptions.BadRequestException"></exception>
+            <exception cref="T:BaseBackgroundJob.Application.Common.Exceptions.BadRequestException"></exception>
         </member>
-        <member name="T:BaseCleanArchitecture.Api.Extensions.SerilogExtensions">
+        <member name="T:BaseBackgroundJob.Api.Extensions.SerilogExtensions">
             <summary>
             Extension methods for configuring Serilog logging.
             </summary>
         </member>
-        <member name="F:BaseCleanArchitecture.Api.Extensions.SerilogExtensions.DefaultSectionName">
+        <member name="F:BaseBackgroundJob.Api.Extensions.SerilogExtensions.DefaultSectionName">
             <summary>
             Default configuration section name for logger settings.
             </summary>
         </member>
-        <member name="M:BaseCleanArchitecture.Api.Extensions.SerilogExtensions.UseSerilogFromSettings(Microsoft.Extensions.Hosting.IHostBuilder,System.String)">
+        <member name="M:BaseBackgroundJob.Api.Extensions.SerilogExtensions.UseSerilogFromSettings(Microsoft.Extensions.Hosting.IHostBuilder,System.String)">
             <summary>
             Configures Serilog using settings from the specified configuration section.
             </summary>
