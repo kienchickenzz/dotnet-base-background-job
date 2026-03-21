@@ -1,9 +1,9 @@
-using BaseCleanArchitecture.Application;
-using BaseCleanArchitecture.Persistence;
-using BaseCleanArchitecture.Persistence.Initialization;
-using BaseCleanArchitecture.Api.Configurations;
-using BaseCleanArchitecture.Api.Extensions;
-using BaseCleanArchitecture.Api.OpenApi;
+using BaseBackgroundJob.Application;
+using BaseBackgroundJob.Persistence;
+using BaseBackgroundJob.Persistence.Initialization;
+using BaseBackgroundJob.Api.Configurations;
+using BaseBackgroundJob.Api.Extensions;
+using BaseBackgroundJob.Api.OpenApi;
 
 
 var builder = WebApplication.CreateBuilder(args);
