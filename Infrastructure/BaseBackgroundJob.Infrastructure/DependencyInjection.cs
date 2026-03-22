@@ -21,7 +21,7 @@ public static class DependencyInjection
         return services;
     }
 
-    public static IApplicationBuilder _UseInfrastructure(this IApplicationBuilder builder, IConfiguration configuration, IWebHostEnvironment env)
+    public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder builder, IConfiguration configuration)
     {
         builder
             ._UseHangfireDashboard(configuration);
@@ -41,8 +41,8 @@ public static class DependencyInjection
         services.AddHangfireServer();
 
         services.AddHangfire(hangfireConfig => hangfireConfig
-            .UseSqlServerStorage(config.GetConnectionString("DefaultConnection"))
-            .UseFilter(new LogJobFilter()));
+            .UseSqlServerStorage(config.GetConnectionString("DefaultConnection")) // Lưu jobs vào SQL Server 
+            .UseFilter(new LogJobFilter())); // Gắn filter để log job lifecycle  
 
         return services;
     }

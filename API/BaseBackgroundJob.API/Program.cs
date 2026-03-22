@@ -46,7 +46,11 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapControllers();
 
+app.UseInfrastructure(builder.Configuration);
+
 app.UseCustomExceptionHandler();
+
+app.Services.AddProductStatisticsJob();
 
 app.Lifetime.ApplicationStarted.Register(() =>
 {
