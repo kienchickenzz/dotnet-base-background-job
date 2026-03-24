@@ -46,7 +46,7 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapControllers();
 
-app.UseInfrastructure(builder.Configuration);
+app.UseInfrastructure();
 
 app.UseCustomExceptionHandler();
 
